@@ -1,5 +1,5 @@
 import "./header.css";
-import ChefLogo from "../assets/chef-claude.png";
+import ChefLogo from "../../assets/chef-claude.png";
 
 export function Header() {
   return (

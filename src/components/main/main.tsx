@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { IngredientForm } from "./ingredient-form";
-import { List } from "./list/list";
+import { IngredientForm } from "../forms/ingredient-form";
+import { List } from "../list/list";
 import "./main.css";
 
 export function Main() {
