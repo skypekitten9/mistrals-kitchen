@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IngredientForm } from "../forms/ingredient-form";
 import { List } from "../list/list";
 import "./main.css";
+import { Banner } from "../banner/banner";
 
 export function Main() {
   const [ingredientList, setIngredientList] = useState<string[]>([]);
@@ -21,7 +22,15 @@ export function Main() {
       <div className="main-content">
         <IngredientForm onIngredientSubmited={handleOnIngredientSubmited} />
         {shouldRenderIgredientList && (
-          <List title="Ingridents on hand:" items={ingredientList} />
+          <>
+            <List title="Ingridents on hand:" items={ingredientList} />
+            <Banner
+              title={"Ready for a recipe?"}
+              description={"Generate a recipe from your list of ingredients."}
+            >
+              <button className="get-recipe-button">Get a recipe</button>
+            </Banner>
+          </>
         )}
       </div>
     </main>

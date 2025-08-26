@@ -3,6 +3,18 @@
   margin: 0px;
 }
 
+button {
+  border: 0px;
+  border-radius: 6px;
+  height: 38px;
+  padding: 9px 17px 9px 17px;
+  font-size: small;
+  flex-basis: 0;
+  color: #fafaf8;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
 body {
   margin: 0px;
   background-color: #fafaf8;

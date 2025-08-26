@@ -16,3 +16,11 @@ main {
   max-width: 720px;
   gap: 48px;
 }
+
+.get-recipe-button {
+  background-color: #d17557;
+}
+
+.get-recipe-button:active {
+  background-color: #d1856c;
+}
