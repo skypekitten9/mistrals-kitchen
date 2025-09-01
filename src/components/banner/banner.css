@@ -1,6 +1,7 @@
 .bannerRoot {
   display: flex;
   gap: 8px;
+  width: 100%;
   background-color: #f0efeb;
   flex-wrap: wrap;
   justify-content: space-between;

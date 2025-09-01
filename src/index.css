@@ -20,3 +20,10 @@ body {
   background-color: #fafaf8;
   font-family: Inter, sans-serif;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

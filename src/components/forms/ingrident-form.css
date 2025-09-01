@@ -1,6 +1,7 @@
 .ingridient-root {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   gap: 12px;
 }
 
@@ -18,12 +19,16 @@
   padding-bottom: 9px;
   font-size: small;
   box-shadow: black;
+  min-width: 80px;
   flex-grow: 2;
 }
 
 .submit-ingridient-button {
-  max-width: 183px;
   background-color: #141413;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 80px;
   flex-grow: 1;
 }
 
