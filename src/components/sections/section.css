@@ -1,0 +1,16 @@
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+}
+
+.get-recipe-button {
+  background-color: #d17557;
+}
+
+.get-recipe-button:active {
+  background-color: #d1856c;
+}
