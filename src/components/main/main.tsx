@@ -8,9 +8,11 @@ const MIN_REQUIRED_INGRIDIENTS: number = 4;
 
 export function Main() {
   const [ingredientList, setIngredientList] = useState<string[]>([]);
+  const [shouldShowRecipe, setShouldShowRecipe] = useState(false);
   const shouldRenderIgredientList = ingredientList.length > 0;
   const shouldRenderGetRecipeBanner =
     ingredientList.length >= MIN_REQUIRED_INGRIDIENTS;
+
   const handleOnIngredientSubmited = (ingredient: string) => {
     const lowercase = ingredient.toLowerCase();
     const firstCapitalized =
@@ -19,6 +21,9 @@ export function Main() {
       ...oldIngredientList,
       firstCapitalized,
     ]);
+  };
+  const handleOnGetRecipie = () => {
+    setShouldShowRecipe((oldValue) => !oldValue);
   };
 
   return (
@@ -37,12 +42,18 @@ export function Main() {
                 title={"Ready for a recipe?"}
                 description={"Generate a recipe from your list of ingredients."}
               >
-                <button className="get-recipe-button">Get a recipe</button>
+                <button
+                  className="get-recipe-button"
+                  onClick={handleOnGetRecipie}
+                >
+                  Get a recipe
+                </button>
               </Banner>
             )}
           </>
         )}
       </section>
+      {shouldShowRecipe && <section>hello</section>}
     </main>
   );
 }
