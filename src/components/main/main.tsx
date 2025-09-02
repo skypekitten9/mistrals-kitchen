@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./main.css";
 import { IngredientSection } from "../sections/ingridient-section";
+import { RecipeSection } from "../sections/recipe-section";
 
 export function Main() {
   const [shouldShowRecipe, setShouldShowRecipe] = useState(false);
@@ -11,7 +12,7 @@ export function Main() {
   return (
     <main>
       <IngredientSection onGetRecipe={handleOnGetRecipie} />
-      {shouldShowRecipe && <section>hello</section>}
+      {shouldShowRecipe && <RecipeSection />}
     </main>
   );
 }
