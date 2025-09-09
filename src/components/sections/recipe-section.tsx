@@ -16,3 +16,7 @@ export function RecipeSection({ recipe }: TRecipeSection) {
     </section>
   );
 }
+
+export function RecipeSectionSkeletonLoader() {
+  return <div className="skeleton-loader" />;
+}
