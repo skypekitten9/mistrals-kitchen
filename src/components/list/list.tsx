@@ -1,4 +1,5 @@
 import "../text.css";
+import "./list.css";
 
 type TList = {
   title: string;
@@ -7,7 +8,10 @@ type TList = {
 
 export function List({ title, items, ...rest }: TList) {
   const listItemElements = items.map((item) => (
-    <li className="list-item">{item}</li>
+    <li className="list-item">
+      {item}
+      <button className="remove-button">🗑️</button>
+    </li>
   ));
   return (
     <div className="text-container" {...rest}>
