@@ -16,7 +16,7 @@ export async function getRecipeFromAi(ingredients: string[]) {
         { role: "system", content: AI_PROMPT },
         {
           role: "user",
-          content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,
+          content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make, and make sure your response starts with "Based on the ingredients you".`,
         },
       ],
       max_tokens: 1024,

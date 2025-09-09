@@ -1,0 +1,23 @@
+li {
+  /* Text lg/Regular */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #475467;
+}
+p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #475467;
+}
+
+strong {
+  font-weight: 500;
+  font-size: 24px;
+  color: black;
+}

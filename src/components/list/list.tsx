@@ -1,4 +1,4 @@
-import "./list.css";
+import "../text.css";
 
 type TList = {
   title: string;
@@ -7,11 +7,11 @@ type TList = {
 
 export function List({ title, items, ...rest }: TList) {
   const listItemElements = items.map((item) => (
-    <li className="listItem">{item}</li>
+    <li className="list-item">{item}</li>
   ));
   return (
-    <div className="listContainer" {...rest}>
-      <h2 className="listTitle">{title}</h2>
+    <div className="text-container" {...rest}>
+      <h2 className="text-title">{title}</h2>
       <ul>{...listItemElements}</ul>
     </div>
   );

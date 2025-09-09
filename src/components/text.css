@@ -1,18 +1,18 @@
-.listTitle {
+.text-title {
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 38px;
 }
 
-.listContainer {
+.text-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 100%;
 }
 
-.listItem {
+.list-item {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
