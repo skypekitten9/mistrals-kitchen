@@ -1,5 +1,9 @@
 import "./section.css";
 
-export function RecipeSection() {
-  return <section className="main-section">hello</section>;
+type TRecipeSection = {
+  recipe: string;
+};
+
+export function RecipeSection({ recipe }: TRecipeSection) {
+  return <section className="main-section">{recipe}</section>;
 }

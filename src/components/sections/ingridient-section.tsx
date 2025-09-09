@@ -6,8 +6,10 @@ import "./section.css";
 
 const MIN_REQUIRED_INGRIDIENTS: number = 4;
 
+export type TOnGetRecipe = (ingridients: string[]) => void;
+
 type TIngridientForm = {
-  onGetRecipe: (ingridients: string[]) => void;
+  onGetRecipe: TOnGetRecipe;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export function IngredientSection({ onGetRecipe }: TIngridientForm) {
