@@ -13,9 +13,15 @@ import { getRecipeFromAi } from "../../api";
 export function Main() {
   const [recipe, setRecipe] = useState<string | undefined>(undefined);
   const [recipeLoading, setRecipeLoading] = useState(false);
+  const [recipeError, setRecipeError] = useState(false);
   const handleOnGetRecipie: TOnGetRecipe = (ingridients) => {
     setRecipeLoading(true);
     getRecipeFromAi(ingridients).then((recipe) => {
+      if (recipe) {
+        setRecipeError(false);
+      } else {
+        setRecipeError(true);
+      }
       setRecipe(recipe);
       setRecipeLoading(false);
     });
@@ -26,6 +32,9 @@ export function Main() {
       <IngredientSection onGetRecipe={handleOnGetRecipie} />
       {recipe && <RecipeSection recipe={recipe} />}
       {recipeLoading && <RecipeSectionSkeletonLoader />}
+      {recipeError && (
+        <h3>Seems like the chef is on vacation, try again later.</h3>
+      )}
     </main>
   );
 }
