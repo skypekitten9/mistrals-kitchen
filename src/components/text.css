@@ -13,9 +13,16 @@
 }
 
 .list-item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   color: #475467;
+}
+.list-item::before {
+  content: "•";
+  padding-right: 5px;
 }

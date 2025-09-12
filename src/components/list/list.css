@@ -2,10 +2,20 @@
   all: unset;
   color: rgb(200, 65, 65);
   cursor: pointer;
-  margin-left: 5px;
-  opacity: 0%;
+  height: 1.2em;
 }
 
-.remove-button:hover {
-  opacity: 100%;
+.remove-button > img {
+  width: 100%;
+  height: 100%;
+}
+
+.list-item .remove-button {
+  display: none;
+}
+
+.list-item:focus-within .remove-button,
+.list-item:hover .remove-button {
+  display: inline;
+  cursor: pointer;
 }

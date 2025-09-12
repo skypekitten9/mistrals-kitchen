@@ -38,6 +38,11 @@ export function IngredientSection({ onGetRecipe }: TIngridientForm) {
             title="Ingridents on hand:"
             items={ingredientList}
             aria-label=""
+            onItemDeleted={function (item: string): void {
+              setIngredientList((oldIngredientList) =>
+                oldIngredientList.filter((ingrediant) => ingrediant !== item)
+              );
+            }}
           />
           {shouldRenderGetRecipeBanner && (
             <Banner
