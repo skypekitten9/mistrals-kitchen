@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./main.css";
 import {
   IngredientSection,
@@ -14,6 +14,14 @@ export function Main() {
   const [recipe, setRecipe] = useState<string | undefined>(undefined);
   const [recipeLoading, setRecipeLoading] = useState(false);
   const [recipeError, setRecipeError] = useState(false);
+  const recipeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (recipe && recipeRef.current) {
+      recipeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [recipe]);
+
   const handleOnGetRecipie: TOnGetRecipe = (ingridients) => {
     setRecipeLoading(true);
     getRecipeFromAi(ingridients).then((recipe) => {
@@ -30,7 +38,7 @@ export function Main() {
   return (
     <main>
       <IngredientSection onGetRecipe={handleOnGetRecipie} />
-      {recipe && <RecipeSection recipe={recipe} />}
+      {recipe && <RecipeSection ref={recipeRef} recipe={recipe} />}
       {recipeLoading && <RecipeSectionSkeletonLoader />}
       {recipeError && (
         <h3>Seems like the chef is on vacation, try again later.</h3>
