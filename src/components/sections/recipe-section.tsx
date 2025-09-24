@@ -8,7 +8,7 @@ type TRecipeSection = {
 
 export function RecipeSection({ recipe }: TRecipeSection) {
   return (
-    <section className="main-section">
+    <section className="main-section" aria-live="polite">
       <div className="text-container">
         <h2 className="text-title">Suggested recipe:</h2>
         <Markdown markdown={recipe} />
