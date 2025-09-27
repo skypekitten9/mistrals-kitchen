@@ -8,7 +8,7 @@ import {
   RecipeSection,
   RecipeSectionSkeletonLoader,
 } from "../sections/recipe-section";
-import { getRecipeFromAi } from "../../api";
+import { getRecipeFromAi } from "../../external";
 
 export function Main() {
   const [recipe, setRecipe] = useState<string | undefined>(undefined);
