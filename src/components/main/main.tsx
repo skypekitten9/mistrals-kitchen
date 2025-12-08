@@ -9,6 +9,7 @@ import {
   RecipeSectionSkeletonLoader,
 } from "../sections/recipe-section";
 import { getRecipeFromAi } from "../../external";
+import { FailedToFetchSection } from "../sections/failed-to-fetch-section";
 
 const RecipeState = {
   None: 0,
@@ -43,7 +44,7 @@ export function Main() {
       {(recipe && recipeState === RecipeState.Loaded) && <RecipeSection ref={recipeRef} recipe={recipe} />}
       {recipeState === RecipeState.Loading && <RecipeSectionSkeletonLoader />}
       {recipeState === RecipeState.Error && (
-        <h3>Seems like the chef is on vacation, try again later.</h3>
+        <FailedToFetchSection />
       )}
     </main>
   );
