@@ -6,7 +6,7 @@ import type { HTMLProps } from "react";
 type TFailedToFetchSection = {
 } & HTMLProps<HTMLDivElement>;
 
-const markdown = `Unable to fetch recipe at this time. Seems like the chef is out of ingredients (tokens), here is a backup recipe in the meantime:
+const markdown = `Unable to fetch recipe at this time. Seems like the chef is out of ingredients (tokens), here is a backup recipe in the meantime: 
 
 ### Quick Tomato & Basil Offline Pasta
 
