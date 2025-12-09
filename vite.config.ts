@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Set `base` so the built app uses the repo path on GitHub Pages
-  // Replace '/chef-claude/' with your repo name if it differs
-  base: '/chef-claude/',
+  // Use a relative base so the built app works after repo renames
+  // Alternatively set this to '/your-repo-name/' for a fixed path
+  base: './',
   plugins: [react()],
 })
