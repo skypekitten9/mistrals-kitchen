@@ -31,6 +31,11 @@ export function IngredientSection({ onGetRecipe }: TIngridientForm) {
 
   return (
     <section className="main-section">
+      <Banner
+        title={"Welcome to the kitchen"}
+        description={"Mistral helps you cook delicious meals with what you have at home! Add some ingredients to get started (4 minumum)."}
+      >
+      </Banner>
       <IngredientForm onIngredientSubmited={handleOnIngredientSubmited} />
       {shouldRenderIgredientList && (
         <>
