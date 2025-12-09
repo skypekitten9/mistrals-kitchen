@@ -53,6 +53,7 @@ export function IngredientSection({ onGetRecipe }: TIngridientForm) {
             <Banner
               title={"Ready for a recipe?"}
               description={"Generate a recipe from your list of ingredients."}
+              className="transition"
             >
               <button
                 className="get-recipe-button"
